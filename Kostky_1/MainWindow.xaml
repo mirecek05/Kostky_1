@@ -33,6 +33,79 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Label Grid.Column="1"
+               Grid.Row="1" 
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch" 
+               BorderBrush="Black" 
+               BorderThickness="1" FontSize="40" 
+               Content="0" Name="kostka1" 
+               HorizontalContentAlignment="Center" 
+               VerticalContentAlignment="Center" />
+        <Label Grid.Column="3"
+               Grid.Row="1"
+               HorizontalAlignment="Stretch" 
+               VerticalAlignment="Stretch" 
+               BorderBrush="Black" 
+               BorderThickness="1"
+               FontSize="40" Content="0" 
+               Name="kostka2" HorizontalContentAlignment="Center" 
+               VerticalContentAlignment="Center" />
+        <Label Grid.Column="5" 
+               Grid.Row="1" 
+               HorizontalAlignment="Stretch" 
+               VerticalAlignment="Stretch" 
+               BorderBrush="Black"
+               BorderThickness="1"
+               FontSize="40" 
+               Content="0" 
+               Name="kostka3" 
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center" />
+        <Label Grid.Column="7"
+               Grid.Row="1"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+               BorderBrush="Black" 
+               BorderThickness="1" 
+               FontSize="40" 
+               Content="0" 
+               Name="kostka4"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center" />
+        <Label Grid.Column="9"
+               Grid.Row="1" 
+               HorizontalAlignment="Stretch" 
+               VerticalAlignment="Stretch" 
+               BorderBrush="Black" 
+               BorderThickness="1"
+               FontSize="40" 
+               Content="0" 
+               Name="kostka5"
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center" />
+        <Label Grid.Column="11"
+               Grid.Row="1"
+               HorizontalAlignment="Stretch" 
+               VerticalAlignment="Stretch" 
+               BorderBrush="Black"
+               BorderThickness="1" 
+               FontSize="40" 
+               Content="0" 
+               Name="kostka6" 
+               HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center" />
+        <Button Content="Hoď kostky"
+                Grid.Column="5"
+                Grid.ColumnSpan="3"
+                HorizontalAlignment="Stretch"
+                Grid.Row="7" 
+                VerticalAlignment="Stretch"
+                FontSize="20"
+                Name="btnHod"
+                Click="btnHod_Click"/>
+                
+
 
     </Grid>
 </Window>
