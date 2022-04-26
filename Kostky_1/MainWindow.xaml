@@ -33,6 +33,7 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Rectangle Grid.Column="1" Grid.Row="5" Name="k1" />
         <Label Grid.Column="1"
                Grid.Row="1" 
                HorizontalAlignment="Stretch"
