@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kostky_1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="CanResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -33,14 +33,19 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Rectangle Grid.Column="1" Grid.Row="5" Name="k1" />
+        <Rectangle Grid.Column="1" Grid.Row="1" Name="k1" />
+        <Rectangle Grid.Column="3" Grid.Row="1" Name="k2" />
+        <Rectangle Grid.Column="5" Grid.Row="1" Name="k3" />
+        <Rectangle Grid.Column="7" Grid.Row="1" Name="k4" />
+        <Rectangle Grid.Column="9" Grid.Row="1" Name="k5" />
+        <Rectangle Grid.Column="11" Grid.Row="1" Name="k6" />
         <Label Grid.Column="1"
                Grid.Row="1" 
                HorizontalAlignment="Stretch"
                VerticalAlignment="Stretch" 
                BorderBrush="Black" 
                BorderThickness="1" FontSize="40" 
-               Content="0" Name="kostka1" 
+               Name="kostka1" 
                HorizontalContentAlignment="Center" 
                VerticalContentAlignment="Center" />
         <Label Grid.Column="3"
@@ -49,7 +54,7 @@
                VerticalAlignment="Stretch" 
                BorderBrush="Black" 
                BorderThickness="1"
-               FontSize="40" Content="0" 
+               FontSize="40"
                Name="kostka2" HorizontalContentAlignment="Center" 
                VerticalContentAlignment="Center" />
         <Label Grid.Column="5" 
@@ -59,7 +64,6 @@
                BorderBrush="Black"
                BorderThickness="1"
                FontSize="40" 
-               Content="0" 
                Name="kostka3" 
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center" />
@@ -70,7 +74,6 @@
                BorderBrush="Black" 
                BorderThickness="1" 
                FontSize="40" 
-               Content="0" 
                Name="kostka4"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center" />
@@ -81,7 +84,6 @@
                BorderBrush="Black" 
                BorderThickness="1"
                FontSize="40" 
-               Content="0" 
                Name="kostka5"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center" />
@@ -92,7 +94,6 @@
                BorderBrush="Black"
                BorderThickness="1" 
                FontSize="40" 
-               Content="0" 
                Name="kostka6" 
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center" />
@@ -105,7 +106,7 @@
                 FontSize="20"
                 Name="btnHod"
                 Click="btnHod_Click"/>
-                
+
 
 
     </Grid>
