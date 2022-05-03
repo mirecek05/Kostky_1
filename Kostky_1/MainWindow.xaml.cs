@@ -105,6 +105,7 @@ namespace Kostky_1
                 kostka.Hod();
             }
             ZobrazKostky();
+            SpocitejBody();
         }
         private int SpocitejBody()
         {
@@ -121,6 +122,39 @@ namespace Kostky_1
             {
                 pocty[kostka.Hodnota]++;
             }
+            if (pocty.ContainsValue(6)) //neceho je 6
+            {
+             var kostka =  pocty.First(hodnota => hodnota.Value == 6).Key;
+                if(kostka == 1)
+                {
+                 body = 8000;
+                }
+                else
+                {
+                 body = kostka * 800;
+                }
+            }
+            else if (pocty.ContainsValue(5)) //neceho je 5
+            {
+             var kostka = pocty.First(hodnota => hodnota.Value == 5).Key;
+                if(kostka == 1)
+                {
+                    body = 4000;
+                    body += 50 * pocty[5];
+                    
+                }
+                else
+                {
+                    body = kostka * 400;
+                    body += 100 * pocty[1];
+                    if (kostka != 5)
+                    {
+                        body += 50 * pocty[5];
+                    }
+                    
+                }
+            }
+
             return body;
         }
     }
