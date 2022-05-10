@@ -41,7 +41,7 @@ namespace Kostky_1
             Grid.SetColumn(k1, 1);
 
         }
-       
+
         private ImageSource GetImage(byte[] resouce)
         {
             MemoryStream memoryStream = new MemoryStream(resouce);
@@ -69,9 +69,9 @@ namespace Kostky_1
         }
         private void ZobrazKostku(Rectangle rectangle, int cislo)
         {
-            if(cislo == 1)
+            if (cislo == 1)
             {
-             rectangle.Fill = new ImageBrush(GetImage(Properties.Resources.dice_one));
+                rectangle.Fill = new ImageBrush(GetImage(Properties.Resources.dice_one));
             }
             else if (cislo == 2)
             {
@@ -97,7 +97,7 @@ namespace Kostky_1
 
 
         }
-        
+
         private void btnHod_Click(object sender, RoutedEventArgs e)
         {
             foreach (var kostka in kostky)
@@ -105,9 +105,9 @@ namespace Kostky_1
                 kostka.Hod();
             }
             ZobrazKostky();
-            SpocitejBody();
+            lbl_body.Content = $"Body: {SpocitejBody(kostky)}";
         }
-        private int SpocitejBody()
+        private int SpocitejBody(Kostka[] kostky)
         {
             int body = 0;
             Dictionary<int, int> pocty = new Dictionary<int, int>();
@@ -124,38 +124,72 @@ namespace Kostky_1
             }
             if (pocty.ContainsValue(6)) //neceho je 6
             {
-             var kostka =  pocty.First(hodnota => hodnota.Value == 6).Key;
-                if(kostka == 1)
+                var kostka = pocty.First(hodnota => hodnota.Value == 6).Key;
+                if (kostka == 1)
                 {
-                 body = 8000;
+                    body = 8000;
                 }
                 else
                 {
-                 body = kostka * 800;
+                    body = kostka * 800;
                 }
             }
             else if (pocty.ContainsValue(5)) //neceho je 5
             {
-             var kostka = pocty.First(hodnota => hodnota.Value == 5).Key;
-                if(kostka == 1)
+                var kostka = pocty.First(hodnota => hodnota.Value == 5).Key;
+                if (kostka == 1)
                 {
                     body = 4000;
                     body += 50 * pocty[5];
-                    
+
                 }
                 else
                 {
                     body = kostka * 400;
                     body += 100 * pocty[1];
-                    if (kostka != 5)
-                    {
-                        body += 50 * pocty[5];
-                    }
-                    
+                    body += 50 * pocty[5];
+
+
                 }
             }
+            else if (pocty.ContainsValue(4)) //neceho je 4
+            {
+                var kostka = pocty.First(hodnota => hodnota.Value == 4).Key;
+                if (kostka == 1) //pokud jsou 4 jednicky
+                {
+                    body = 2000;
+                    body += 50 * pocty[5];
 
+                }
+                else
+                {
+                    body = kostka * 200;
+                    body += 100 * pocty[1];
+                    body += 50 * pocty[5];
+
+
+                }
+            }
+            else if (pocty.ContainsValue(3)) //neceho je 3
+            {
+                var kostka = pocty.First(hodnota => hodnota.Value == 3).Key;
+                if (kostka == 1)//jsou 3 jednicky
+                {
+                    body = 1000;
+
+                }
+                else
+                {
+                    body = kostka * 100;
+                }
+                int pocetTrojic = 0;
+                foreach(var pocet in pocty)
+                {
+                    pocetTrojic++;   
+                }
+            }
             return body;
         }
+        public int Po
     }
-}
+

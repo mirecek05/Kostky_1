@@ -17,6 +17,7 @@ namespace Kostky_1
         {
             Random random = new Random();
             hodnota = random.Next(1, 7);
+            
 
         }
     }

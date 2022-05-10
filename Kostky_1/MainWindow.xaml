@@ -39,7 +39,7 @@
         <Rectangle Grid.Column="7" Grid.Row="1" Name="k4" />
         <Rectangle Grid.Column="9" Grid.Row="1" Name="k5" />
         <Rectangle Grid.Column="11" Grid.Row="1" Name="k6" />
-        
+
         <Button Content="Hoď kostky"
                 Grid.Column="5"
                 Grid.ColumnSpan="3"
@@ -49,6 +49,8 @@
                 FontSize="20"
                 Name="btnHod"
                 Click="btnHod_Click"/>
+        <Label Grid.Column="1" Content="Label" HorizontalAlignment="Left" Margin="119,0,0,0" Grid.Row="5" VerticalAlignment="Center"/>
+        <Label Name="lbl_body" Grid.Column="1" HorizontalAlignment="Stretch"  Grid.Row="5" VerticalAlignment="Stretch" Content="Body: 0" FontSize="40" Grid.ColumnSpan="5"/>
 
 
 
